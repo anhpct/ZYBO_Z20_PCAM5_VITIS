@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="&#x09;XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, 0x0, 0x4); //reset" key="selection"/>
+		<list key="findhistory">
+			<item value="&#x09;XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, 0x0, 0x4); //reset"/>
+		</list>
+	</section>
+</section>

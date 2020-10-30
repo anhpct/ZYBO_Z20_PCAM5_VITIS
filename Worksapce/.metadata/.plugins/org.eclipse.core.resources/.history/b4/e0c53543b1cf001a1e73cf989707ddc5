@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Practice_G" location="C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G" platform="C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/design_1_sys_wrapper.xpfm" platformUID="xilinx:zybo-z7-20::0.0(custom)" systemProject="Practice_G_system" sysConfig="design_1_sys_wrapper" runtime="cpp" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="e848af77415b11859edde1d4003c6576">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1873740054">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1287412224" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

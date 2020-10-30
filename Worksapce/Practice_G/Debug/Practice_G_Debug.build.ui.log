@@ -1,0 +1,25 @@
+2020-08-04T13:52:08.375597100255-13:52:08 **** Incremental Build of configuration Debug for project Practice_G ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/Practice_G.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Practice_G.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/sw/design_1_sys_wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/Practice_G.d" -MT"src/Practice_G.o" -o "src/Practice_G.o" "../src/Practice_G.c"
+000-'Finished building: ../src/Practice_G.c'
+000-' '
+000-'Building target: Practice_G.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/sw/design_1_sys_wrapper/standalone_domain/bsplib/lib -o "Practice_G.elf"  ./src/Practice_G.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: Practice_G.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size Practice_G.elf  |tee "Practice_G.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  94780	   2760	  25952	 123492	  1e264	Practice_G.elf
+000-'Finished building: Practice_G.elf.size'
+000-' '
+00255-
+13:52:10 Build Finished (took 2s.205ms)
+

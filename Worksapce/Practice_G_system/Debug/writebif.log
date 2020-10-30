@@ -1,0 +1,9 @@
+TRACE::2020-07-17.10:57:20::SCWBifWriter::Found the complete platform C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/design_1_sys_wrapper.xpfm
+TRACE::2020-07-17.10:57:21::SCWBifWriter::hardware databse : design_1_sys_wrapper_1
+TRACE::2020-07-17.10:57:21::SCWBifWriter::bitstream found in the design
+TRACE::2020-07-17.10:57:21::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2020-07-17.10:57:21::SCWBifWriter::proc type : 
+TRACE::2020-07-17.10:57:21::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2020-07-17.10:57:21::SCWBifWriter::Device type is : zynq
+TRACE::2020-07-17.10:57:21::SCWBifWriter::Writing BIF to file : C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G_system/Debug/system.bif
+TRACE::2020-07-17.10:57:21::SCWBifWriter::Writing the Zynq Baremetal bif 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Local" key="Practice_G-target"/>
+	<item value="Auto Detect" key="Practice_G-device"/>
+	<item value="_ide/bitstream/design_1_sys_wrapper.bit" key="Practice_G-bitFile"/>
+	<item value="false" key="Practice_G-partial_bit"/>
+	<item value="false" key="Practice_G-skip_rev_check"/>
+	<item value="Practice_G" key="programfpga.sdxproject"/>
+	<item value="" key="Practice_G-bmmFile"/>
+</section>

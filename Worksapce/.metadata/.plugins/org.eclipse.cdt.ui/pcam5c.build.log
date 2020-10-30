@@ -1,0 +1,25 @@
+08:40:47 **** Build of configuration Debug for project pcam5c ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/platform/platform.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/sw/design_1_sys_wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform/platform.d" -MT"src/platform/platform.o" -o "src/platform/platform.o" "../src/platform/platform.c"
+'Finished building: ../src/platform/platform.c'
+' '
+'Building file: ../src/ov5640/OV5640.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov5640/OV5640.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/sw/design_1_sys_wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/ov5640/OV5640.d" -MT"src/ov5640/OV5640.o" -o "src/ov5640/OV5640.o" "../src/ov5640/OV5640.cpp"
+In file included from ../src/ov5640/OV5640.h:18,
+                 from ../src/ov5640/OV5640.cpp:8:
+../src/ov5640/../hdmi/VideoOutput.h:17:10: fatal error: xclk_wiz.h: No such file or directory
+ #include "xclk_wiz.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [src/ov5640/subdir.mk:20: src/ov5640/OV5640.o] Error 1
+make: *** [makefile:48: all] Error 2
+
+08:40:52 Build Finished (took 4s.710ms)
+

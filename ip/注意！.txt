@@ -1,0 +1,3 @@
+セミナの資料はカメラ用 IPのMIPI_D_CSI_RX がありません。
+実習の時、MIPI_CSI_2_RXのIP を使ってください。
+Practice_Gを実習する時、「IP Catalog」をクリック、ipライブラリ・フォルダを追加してください。

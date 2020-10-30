@@ -1,0 +1,10 @@
+08:40:54 **** Build of configuration Debug for project pcam5c_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 37991 C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/design_1_sys_wrapper.xpfm standalone_domain C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/pcam5c_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/design_1_sys_wrapper.xpfm --sys_config design_1_sys_wrapper --bif C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/pcam5c_system/Debug/system.bif --bitstream C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/pcam5c/_ide/bitstream/design_1_sys_wrapper.bit --elf C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/pcam5c/Debug/pcam5c.elf,ps7_cortexa9_0
+ELF does not exist: C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/pcam5c/Debug/pcam5c.elf
+make: *** [makefile:37: sd_card] Error 1
+
+08:41:01 Build Finished (took 7s.467ms)
+

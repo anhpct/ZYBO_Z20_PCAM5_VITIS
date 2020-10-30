@@ -1,0 +1,592 @@
+10:48:12 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\temp_xsdb_launch_script.tcl
+10:48:17 INFO  : XSCT server has started successfully.
+10:48:20 INFO  : plnx-install-location is set to ''
+10:48:20 INFO  : Successfully done setting XSCT server connection channel  
+10:48:20 INFO  : Successfully done query RDI_DATADIR 
+10:48:20 INFO  : Successfully done setting workspace for the tool. 
+10:48:21 INFO  : Registering command handlers for Vitis TCF services
+10:57:11 INFO  : Checking for BSP changes to sync application flags for project 'Practice_G'...
+10:58:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:58:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+10:58:30 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+10:59:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:59:08 INFO  : Jtag cable 'Digilent Zybo Z7 210351A822C1A' is selected.
+10:59:08 INFO  : 'jtag frequency' command is executed.
+10:59:08 INFO  : Context for 'APU' is selected.
+10:59:09 INFO  : System reset is completed.
+10:59:12 INFO  : 'after 3000' command is executed.
+10:59:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+10:59:14 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+10:59:14 INFO  : Context for 'APU' is selected.
+10:59:14 INFO  : Hardware design information is loaded from 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa'.
+10:59:14 INFO  : 'configparams force-mem-access 1' command is executed.
+10:59:15 INFO  : Context for 'APU' is selected.
+10:59:15 INFO  : Sourcing of 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl' is done.
+10:59:15 INFO  : 'ps7_init' command is executed.
+10:59:15 INFO  : 'ps7_post_config' command is executed.
+10:59:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:59:16 INFO  : The application 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:59:16 INFO  : 'configparams force-mem-access 0' command is executed.
+10:59:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1
+fpga -file C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:59:16 INFO  : Memory regions updated for context APU
+10:59:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:59:16 INFO  : 'con' command is executed.
+10:59:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:59:16 INFO  : Launch script is exported to file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\.sdk\launch_scripts\single_application_debug\systemdebugger_practice_g_system_standalone.tcl'
+11:02:15 INFO  : Checking for BSP changes to sync application flags for project 'Practice_G'...
+11:02:30 INFO  : Disconnected from the channel tcfchan#3.
+11:02:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:02:32 INFO  : Jtag cable 'Digilent Zybo Z7 210351A822C1A' is selected.
+11:02:32 INFO  : 'jtag frequency' command is executed.
+11:02:32 INFO  : Context for 'APU' is selected.
+11:02:32 INFO  : System reset is completed.
+11:02:35 INFO  : 'after 3000' command is executed.
+11:02:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+11:02:38 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+11:02:38 INFO  : Context for 'APU' is selected.
+11:02:38 INFO  : Hardware design information is loaded from 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa'.
+11:02:38 INFO  : 'configparams force-mem-access 1' command is executed.
+11:02:38 INFO  : Context for 'APU' is selected.
+11:02:38 INFO  : Sourcing of 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl' is done.
+11:02:38 INFO  : 'ps7_init' command is executed.
+11:02:38 INFO  : 'ps7_post_config' command is executed.
+11:02:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:02:39 INFO  : The application 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:02:39 INFO  : 'configparams force-mem-access 0' command is executed.
+11:02:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1
+fpga -file C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:02:39 INFO  : Memory regions updated for context APU
+11:02:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:02:39 INFO  : 'con' command is executed.
+11:02:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:02:39 INFO  : Launch script is exported to file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\.sdk\launch_scripts\single_application_debug\debugger_practice_g-default.tcl'
+11:14:08 INFO  : Disconnected from the channel tcfchan#4.
+11:30:12 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\temp_xsdb_launch_script.tcl
+11:30:17 INFO  : XSCT server has started successfully.
+11:30:17 INFO  : plnx-install-location is set to ''
+11:30:17 INFO  : Successfully done setting XSCT server connection channel  
+11:30:17 INFO  : Successfully done setting workspace for the tool. 
+11:30:18 INFO  : Registering command handlers for Vitis TCF services
+11:30:21 INFO  : Successfully done query RDI_DATADIR 
+11:31:00 INFO  : Hardware specification for platform project 'design_1_sys_wrapper' is updated.
+11:31:11 INFO  : Checking for BSP changes to sync application flags for project 'Practice_G'...
+11:31:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:31:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+11:31:53 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/project_1/design_1_sys_wrapper.bit"
+11:31:56 INFO  : The hardware specfication used by project 'Practice_G' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+11:31:56 INFO  : The file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\bitstream\design_1_sys_wrapper.bit' stored in project is removed.
+11:31:56 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\bitstream' in project 'Practice_G'.
+11:31:56 INFO  : The file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\psinit\ps7_init.tcl' stored in project is removed.
+11:32:08 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\psinit' in project 'Practice_G'.
+11:32:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:32:10 INFO  : Jtag cable 'Digilent Zybo Z7 210351A822C1A' is selected.
+11:32:10 INFO  : 'jtag frequency' command is executed.
+11:32:10 INFO  : Context for 'APU' is selected.
+11:32:10 INFO  : System reset is completed.
+11:32:13 INFO  : 'after 3000' command is executed.
+11:32:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+11:32:16 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+11:32:16 INFO  : Context for 'APU' is selected.
+11:32:16 INFO  : Hardware design information is loaded from 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa'.
+11:32:16 INFO  : 'configparams force-mem-access 1' command is executed.
+11:32:17 INFO  : Context for 'APU' is selected.
+11:32:17 INFO  : Sourcing of 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl' is done.
+11:32:17 INFO  : 'ps7_init' command is executed.
+11:32:17 INFO  : 'ps7_post_config' command is executed.
+11:32:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:32:18 INFO  : The application 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:32:18 INFO  : 'configparams force-mem-access 0' command is executed.
+11:32:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1
+fpga -file C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:32:18 INFO  : Memory regions updated for context APU
+11:32:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:32:18 INFO  : 'con' command is executed.
+11:32:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:32:18 INFO  : Launch script is exported to file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\.sdk\launch_scripts\single_application_debug\debugger_practice_g-default.tcl'
+12:22:48 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\temp_xsdb_launch_script.tcl
+12:22:54 INFO  : XSCT server has started successfully.
+12:22:54 INFO  : Successfully done setting XSCT server connection channel  
+12:22:54 INFO  : plnx-install-location is set to ''
+12:22:54 INFO  : Successfully done setting workspace for the tool. 
+12:22:54 INFO  : Registering command handlers for Vitis TCF services
+12:22:56 INFO  : Successfully done query RDI_DATADIR 
+13:08:51 INFO  : Hardware specification for platform project 'design_1_sys_wrapper' is updated.
+13:10:23 INFO  : Checking for BSP changes to sync application flags for project 'Practice_G'...
+13:12:16 INFO  : The hardware specfication used by project 'Practice_G' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+13:12:16 INFO  : The file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\bitstream\design_1_sys_wrapper.bit' stored in project is removed.
+13:12:17 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\bitstream' in project 'Practice_G'.
+13:12:17 INFO  : The file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\psinit\ps7_init.tcl' stored in project is removed.
+13:12:30 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\psinit' in project 'Practice_G'.
+13:12:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:12:36 INFO  : Jtag cable 'Digilent Zybo Z7 210351A822C1A' is selected.
+13:12:36 INFO  : 'jtag frequency' command is executed.
+13:12:36 INFO  : Context for 'APU' is selected.
+13:12:36 INFO  : System reset is completed.
+13:12:39 INFO  : 'after 3000' command is executed.
+13:12:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+13:12:42 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+13:12:42 INFO  : Context for 'APU' is selected.
+13:12:42 INFO  : Hardware design information is loaded from 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa'.
+13:12:42 INFO  : 'configparams force-mem-access 1' command is executed.
+13:12:42 INFO  : Context for 'APU' is selected.
+13:12:42 INFO  : Sourcing of 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl' is done.
+13:12:43 INFO  : 'ps7_init' command is executed.
+13:12:43 INFO  : 'ps7_post_config' command is executed.
+13:12:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:12:43 INFO  : The application 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:12:43 INFO  : 'configparams force-mem-access 0' command is executed.
+13:12:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1
+fpga -file C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:12:43 INFO  : Memory regions updated for context APU
+13:12:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:12:43 INFO  : 'con' command is executed.
+13:12:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:12:43 INFO  : Launch script is exported to file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\.sdk\launch_scripts\single_application_debug\debugger_practice_g-default.tcl'
+17:06:20 INFO  : Hardware specification for platform project 'design_1_sys_wrapper' is updated.
+17:06:47 INFO  : Checking for BSP changes to sync application flags for project 'Practice_G'...
+17:08:32 INFO  : The hardware specfication used by project 'Practice_G' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+17:08:32 INFO  : The file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\bitstream\design_1_sys_wrapper.bit' stored in project is removed.
+17:08:32 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\bitstream' in project 'Practice_G'.
+17:08:32 INFO  : The file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\psinit\ps7_init.tcl' stored in project is removed.
+17:08:44 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\Practice_G\_ide\psinit' in project 'Practice_G'.
+17:08:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:08:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+17:08:49 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+17:08:55 INFO  : Disconnected from the channel tcfchan#2.
+17:08:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:08:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351A822C1A' is selected.
+17:08:58 INFO  : 'jtag frequency' command is executed.
+17:08:58 INFO  : Context for 'APU' is selected.
+17:08:58 INFO  : System reset is completed.
+17:09:02 INFO  : 'after 3000' command is executed.
+17:09:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+17:09:04 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+17:09:04 INFO  : Context for 'APU' is selected.
+17:09:04 INFO  : Hardware design information is loaded from 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa'.
+17:09:04 INFO  : 'configparams force-mem-access 1' command is executed.
+17:09:04 INFO  : Context for 'APU' is selected.
+17:09:05 INFO  : Sourcing of 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl' is done.
+17:09:05 INFO  : 'ps7_init' command is executed.
+17:09:05 INFO  : 'ps7_post_config' command is executed.
+17:09:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:09:05 INFO  : The application 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:09:05 INFO  : 'configparams force-mem-access 0' command is executed.
+17:09:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1
+fpga -file C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:09:05 INFO  : Memory regions updated for context APU
+17:09:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:09:06 INFO  : 'con' command is executed.
+17:09:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+17:09:06 INFO  : Launch script is exported to file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\.sdk\launch_scripts\single_application_debug\debugger_practice_g-default.tcl'
+08:39:01 INFO  : Checking for BSP changes to sync application flags for project 'pcam5c'...
+08:40:47 INFO  : Checking for BSP changes to sync application flags for project 'pcam5c'...
+11:33:37 INFO  : Disconnected from the channel tcfchan#4.
+13:43:48 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\temp_xsdb_launch_script.tcl
+13:43:53 INFO  : XSCT server has started successfully.
+13:43:53 INFO  : Successfully done setting XSCT server connection channel  
+13:43:53 INFO  : plnx-install-location is set to ''
+13:43:53 INFO  : Successfully done setting workspace for the tool. 
+13:43:54 INFO  : Registering command handlers for Vitis TCF services
+13:43:56 INFO  : Successfully done query RDI_DATADIR 
+13:44:38 INFO  : Hardware specification for platform project 'design_1_sys_wrapper' is updated.
+13:47:34 INFO  : Checking for BSP changes to sync application flags for project 'Practice_G'...
+13:48:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:48:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+13:48:39 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+13:48:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:48:46 INFO  : Jtag cable 'Digilent Zybo Z7 210351A822C1A' is selected.
+13:48:46 INFO  : 'jtag frequency' command is executed.
+13:48:46 INFO  : Context for 'APU' is selected.
+13:48:47 INFO  : System reset is completed.
+13:48:50 INFO  : 'after 3000' command is executed.
+13:48:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+13:48:52 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+13:48:52 INFO  : Context for 'APU' is selected.
+13:48:52 INFO  : Hardware design information is loaded from 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa'.
+13:48:52 INFO  : 'configparams force-mem-access 1' command is executed.
+13:48:53 INFO  : Context for 'APU' is selected.
+13:48:53 INFO  : Sourcing of 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl' is done.
+13:48:53 INFO  : 'ps7_init' command is executed.
+13:48:53 INFO  : 'ps7_post_config' command is executed.
+13:48:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:48:53 INFO  : The application 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:48:54 INFO  : 'configparams force-mem-access 0' command is executed.
+13:48:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1
+fpga -file C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:48:54 INFO  : Memory regions updated for context APU
+13:48:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:48:54 INFO  : 'con' command is executed.
+13:48:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:48:54 INFO  : Launch script is exported to file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\.sdk\launch_scripts\single_application_debug\debugger_practice_g-default.tcl'
+13:49:56 INFO  : Disconnected from the channel tcfchan#2.
+13:49:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:49:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351A822C1A' is selected.
+13:49:58 INFO  : 'jtag frequency' command is executed.
+13:49:58 INFO  : Context for 'APU' is selected.
+13:49:58 INFO  : System reset is completed.
+13:50:01 INFO  : 'after 3000' command is executed.
+13:50:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+13:50:03 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+13:50:03 INFO  : Context for 'APU' is selected.
+13:50:04 INFO  : Hardware design information is loaded from 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa'.
+13:50:04 INFO  : 'configparams force-mem-access 1' command is executed.
+13:50:04 INFO  : Context for 'APU' is selected.
+13:50:04 INFO  : Sourcing of 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl' is done.
+13:50:04 INFO  : 'ps7_init' command is executed.
+13:50:04 INFO  : 'ps7_post_config' command is executed.
+13:50:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:05 INFO  : The application 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:50:05 INFO  : 'configparams force-mem-access 0' command is executed.
+13:50:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1
+fpga -file C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:50:05 INFO  : Memory regions updated for context APU
+13:50:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:05 INFO  : 'con' command is executed.
+13:50:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:50:05 INFO  : Launch script is exported to file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\.sdk\launch_scripts\single_application_debug\debugger_practice_g-default.tcl'
+13:50:20 INFO  : Checking for BSP changes to sync application flags for project 'Practice_G'...
+13:50:34 INFO  : Disconnected from the channel tcfchan#3.
+13:50:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:50:36 INFO  : Jtag cable 'Digilent Zybo Z7 210351A822C1A' is selected.
+13:50:36 INFO  : 'jtag frequency' command is executed.
+13:50:36 INFO  : Context for 'APU' is selected.
+13:50:36 INFO  : System reset is completed.
+13:50:39 INFO  : 'after 3000' command is executed.
+13:50:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+13:50:41 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+13:50:42 INFO  : Context for 'APU' is selected.
+13:50:42 INFO  : Hardware design information is loaded from 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa'.
+13:50:42 INFO  : 'configparams force-mem-access 1' command is executed.
+13:50:42 INFO  : Context for 'APU' is selected.
+13:50:42 INFO  : Sourcing of 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl' is done.
+13:50:42 INFO  : 'ps7_init' command is executed.
+13:50:42 INFO  : 'ps7_post_config' command is executed.
+13:50:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:43 INFO  : The application 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:50:43 INFO  : 'configparams force-mem-access 0' command is executed.
+13:50:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1
+fpga -file C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:50:43 INFO  : Memory regions updated for context APU
+13:50:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:43 INFO  : 'con' command is executed.
+13:50:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:50:43 INFO  : Launch script is exported to file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\.sdk\launch_scripts\single_application_debug\debugger_practice_g-default.tcl'
+13:51:31 INFO  : Disconnected from the channel tcfchan#4.
+13:51:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:51:33 INFO  : Jtag cable 'Digilent Zybo Z7 210351A822C1A' is selected.
+13:51:33 INFO  : 'jtag frequency' command is executed.
+13:51:33 INFO  : Context for 'APU' is selected.
+13:51:33 INFO  : System reset is completed.
+13:51:36 INFO  : 'after 3000' command is executed.
+13:51:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+13:51:39 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+13:51:39 INFO  : Context for 'APU' is selected.
+13:51:39 INFO  : Hardware design information is loaded from 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa'.
+13:51:39 INFO  : 'configparams force-mem-access 1' command is executed.
+13:51:39 INFO  : Context for 'APU' is selected.
+13:51:39 INFO  : Sourcing of 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl' is done.
+13:51:39 INFO  : 'ps7_init' command is executed.
+13:51:39 INFO  : 'ps7_post_config' command is executed.
+13:51:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:51:40 INFO  : The application 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:51:40 INFO  : 'configparams force-mem-access 0' command is executed.
+13:51:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1
+fpga -file C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:51:40 INFO  : Memory regions updated for context APU
+13:51:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:51:40 INFO  : 'con' command is executed.
+13:51:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:51:40 INFO  : Launch script is exported to file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\.sdk\launch_scripts\single_application_debug\systemdebugger_practice_g_system_standalone.tcl'
+13:52:08 INFO  : Checking for BSP changes to sync application flags for project 'Practice_G'...
+13:52:32 INFO  : Disconnected from the channel tcfchan#5.
+13:52:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:52:33 INFO  : Jtag cable 'Digilent Zybo Z7 210351A822C1A' is selected.
+13:52:33 INFO  : 'jtag frequency' command is executed.
+13:52:33 INFO  : Context for 'APU' is selected.
+13:52:34 INFO  : System reset is completed.
+13:52:37 INFO  : 'after 3000' command is executed.
+13:52:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+13:52:39 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+13:52:39 INFO  : Context for 'APU' is selected.
+13:52:39 INFO  : Hardware design information is loaded from 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa'.
+13:52:39 INFO  : 'configparams force-mem-access 1' command is executed.
+13:52:39 INFO  : Context for 'APU' is selected.
+13:52:39 INFO  : Sourcing of 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl' is done.
+13:52:40 INFO  : 'ps7_init' command is executed.
+13:52:40 INFO  : 'ps7_post_config' command is executed.
+13:52:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:52:40 INFO  : The application 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:52:40 INFO  : 'configparams force-mem-access 0' command is executed.
+13:52:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1
+fpga -file C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:52:40 INFO  : Memory regions updated for context APU
+13:52:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:52:40 INFO  : 'con' command is executed.
+13:52:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:52:40 INFO  : Launch script is exported to file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\.sdk\launch_scripts\single_application_debug\debugger_practice_g-default.tcl'
+09:20:46 INFO  : Disconnected from the channel tcfchan#6.
+09:20:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:20:48 INFO  : Jtag cable 'Digilent Zybo Z7 210351A822C1A' is selected.
+09:20:48 INFO  : 'jtag frequency' command is executed.
+09:20:48 INFO  : Context for 'APU' is selected.
+09:20:48 INFO  : System reset is completed.
+09:20:51 INFO  : 'after 3000' command is executed.
+09:20:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1' command is executed.
+09:20:53 INFO  : FPGA configured successfully with bitstream "C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit"
+09:20:54 INFO  : Context for 'APU' is selected.
+09:20:54 INFO  : Hardware design information is loaded from 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa'.
+09:20:54 INFO  : 'configparams force-mem-access 1' command is executed.
+09:20:54 INFO  : Context for 'APU' is selected.
+09:20:54 INFO  : Sourcing of 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl' is done.
+09:20:54 INFO  : 'ps7_init' command is executed.
+09:20:54 INFO  : 'ps7_post_config' command is executed.
+09:20:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:20:55 INFO  : The application 'C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:20:55 INFO  : 'configparams force-mem-access 0' command is executed.
+09:20:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A822C1A" && level==0} -index 1
+fpga -file C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/bitstream/design_1_sys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/design_1_sys_wrapper/export/design_1_sys_wrapper/hw/design_1_sys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/HPZBOOK15G3/Desktop/FPGA/Study/4_Practice/4.6_Practice_G/Worksapce/Practice_G/Debug/Practice_G.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:20:55 INFO  : Memory regions updated for context APU
+09:20:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:20:55 INFO  : 'con' command is executed.
+09:20:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:20:55 INFO  : Launch script is exported to file 'C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\.sdk\launch_scripts\single_application_debug\systemdebugger_practice_g_system_standalone.tcl'
+09:24:33 INFO  : Disconnected from the channel tcfchan#7.
+10:36:47 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\HPZBOOK15G3\Desktop\FPGA\Study\4_Practice\4.6_Practice_G\Worksapce\temp_xsdb_launch_script.tcl
+10:36:51 INFO  : XSCT server has started successfully.
+10:36:51 INFO  : Successfully done setting XSCT server connection channel  
+10:36:51 INFO  : plnx-install-location is set to ''
+10:36:51 INFO  : Successfully done setting workspace for the tool. 
+10:36:53 INFO  : Registering command handlers for Vitis TCF services
+10:36:56 INFO  : Successfully done query RDI_DATADIR 
